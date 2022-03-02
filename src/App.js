@@ -14,6 +14,7 @@ function App() {
         crossorigin="anonymous"
       ></link>
       <Weather />
+      <a href="https://github.com/itsnargr/react-new">git hub code</a>
     </div>
   );
 }
