@@ -1,9 +1,11 @@
 
-import Form from "./Form";
+
 import React, { useState } from "react";
 
 import axios from "axios";
-import "./styles.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -33,12 +35,12 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    const apiKey = "be81f193e065bf5feb2d944c7336968b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (weatherData.ready) {
+  
     return (
       <div className="body">
         <div className="Weather">
@@ -62,15 +64,14 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <WeatherInfo data={weatherData} />
-          <WeatherForecast coordinates={weatherData.coordinates} />
+        
         </div>
-        );
+        
         <div className="overview">
-          <h1>Tehran</h1>
+          <h1>{city}</h1>
           <ul className="nonstyle">
             <li> city :{city}</li>
-            <li> status {weatherData.description}</li>
+            <li> status : {weatherData.description}</li>
           </ul>
         </div>
         <div className="row">
@@ -97,9 +98,6 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-    );
-  } else {
-    search();
-    return "Loading...";
-  }
-}
+     ) };
+ 
+
