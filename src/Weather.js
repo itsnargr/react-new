@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 export default function Weather(props) {
@@ -59,9 +60,11 @@ export default function Weather(props) {
           </div>
         </form>
       </div>
-
       <div className="overview">
         <h1>{city}</h1>
+        <h2>
+          <FormattedDate  />
+        </h2>
         <ul className="nonstyle">
           <li> city :{city}</li>
           <li> status : {weatherData.description}</li>
