@@ -7,6 +7,8 @@ import "./styles.css";
 function App() {
   return (
     <div className="App">
+      <div className="body">
+      
       <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -15,6 +17,7 @@ function App() {
       ></link>
       <Weather defaultCity="Paris" />
       <a href="https://github.com/itsnargr/react-new">github code</a>
+    </div>
     </div>
   );
 }

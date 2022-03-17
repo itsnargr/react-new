@@ -1,4 +1,13 @@
+
+
+
+body{
+   background-image: url("./weatherback.jpg");
+  background-size: cover;
+}
+
 .App {
+  
   font-family: sans-serif;
   text-align: center;
   border-style: 40px;
@@ -6,8 +15,10 @@
   border-block-width: 30px;
   padding: 30px;
   margin: 120px;
+  background-color: #dcd6f7;
+  color:#27296d;
 
-  background-color: #d5def5;
+ 
 }
 .info {
   list-style-type: none;
