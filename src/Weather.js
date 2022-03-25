@@ -62,12 +62,12 @@ export default function Weather(props) {
           </form>
         </div>
         <div className="overview">
-          <h1>{city}</h1>
+          <h1 className="citycss">{weatherData.city}</h1>
           <h2>
             <FormattedDate date={weatherData.date} />
           </h2>
           <ul className="nonstyle">
-            <li> city :{city}</li>
+            <li> city :{weatherData.city}</li>
             <li> status : {weatherData.description}</li>
           </ul>
         </div>
